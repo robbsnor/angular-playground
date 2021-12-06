@@ -2,6 +2,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
+
+    @media only screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .color-palette {
@@ -24,12 +28,10 @@
     }
 
     &__color {
+        position: relative;
         width: 100%;
         transition: width .3s ease-in-out;
         cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
         &:hover {
             width: 200%;
@@ -41,6 +43,10 @@
     }
 
     &__color-name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
         opacity: 0;
         transition: opacity .3s ease-in-out;
     }
