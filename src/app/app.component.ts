@@ -17,6 +17,10 @@ export class AppComponent {
         {
             name: 'Keyboard',
             colors: ['blue', 'darkturquoise', 'lime', 'green', 'darkgreen']
+        },
+        {
+            name: 'Stoplight',
+            colors: ['red', 'orange', 'lime']
         }
     ];
 }
