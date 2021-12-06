@@ -1,0 +1,10 @@
+<div class="color-palettes">
+    <div *ngFor="let palette of palettes" class="color-palette">
+        <h2 class="color-palette__name">{{ palette.name }}</h2>
+        <div class="color-palette__colors">
+            <div *ngFor="let color of palette.colors" class="color-palette__color" [ngStyle]="{'background-color': color}">
+                <div class="color-palette__color-name">{{ color }}</div>
+            </div>
+        </div>
+    </div>
+</div>
